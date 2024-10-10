@@ -1,0 +1,34 @@
+Threads
+Q-1 What is multitasking?
+A multitasking operating system is an operating system that gives you the perception of 2 or more tasks/jobs/processes running at the same time. It does this by dividing system resources amongst these tasks/jobs/processes and switching between the tasks/jobs/processes while they are executing over and over again. Usually, the CPU processes only one task at a time but the switching is so fast that it looks like the CPU is executing multiple processes at a time. They can support either preemptive multitasking, where the OS provides time to applications (virtually all modern OS), or cooperative multitasking, where the OS waits for the program to give back control (Windows 3.x, Mac OS 9, and earlier), leading to hangs and crashes. Also known as Timesharing, multitasking is a logical extension of multiprogramming.
+Multitasking programming is of two types which are as follows:
+1.	Process-based Multitasking
+2.	Thread-based Multitasking
+ 
+Note: Performing multiple tasks at one time is referred to as multithreading in java which is of two types namely Process-based multithreading and Thread based multithreading.
+Which Kind of Multitasking is Better and Why?
+Thread-based multitasking is better as multitasking of threads requires less overhead as compared to process multitasking because processes are heavyweight in turn requiring their own separate address space in memory while threads being very light-weight processes and share the same address space as cooperatively shared by heavyweight processes.
+Switching is a secondary reason as inter-process communication is expensive and limited. Context switching from one process to another is cost hefty whereas inter-thread communication is inexpensive and context switching from one thread to another is lower in cost. 
+Note: However java programs make use of process-based multitasking environments, but this feature is not directly under Java’s direct control while multithreading is complete
+What is a thread?
+Threads are lightweight processes within processes as seen. In java, there are two ways of creating threads namely via Thread class and via Runnable interface.
+ 
+What are the different states of a thread, or what is thread lifecycle?
+A thread in Java at any point of time exists in any one of the following states. A thread lies only in one of the shown states at any instant:
+1.	New
+2.	Runnable
+3.	Blocked
+4.	Waiting
+5.	Timed Waiting
+6.	Terminated
+
+
+
+What is the task of the main thread?
+All Java programs have at least one thread, known as the main thread which is created by JVM at the program start when the main() method is invoked with the main thread as depicted from the output perceived from pseudo-code illustration.
+Illustration:
+System.out.println(“Mayank Solanki”);
+Output: Mayank Solanki
+System.out.println(Thread.currentthread().getname()); 
+Output: main
+ 
